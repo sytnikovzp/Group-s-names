@@ -4,6 +4,7 @@ const arrGroups = [
   'FE2021-5',
   'Fe2020-2',
   'FD2021',
+  'Fd2022-1',
   'fD2022-1',
   'FE2020-3',
   'FD2020/2',
@@ -15,7 +16,7 @@ const arrGroups = [
 ];
 
 function checkGroupsNames(arrGroups) {
-  const groupReg = /^(FD|FM|FE)20\d{2}(-\d+)?$/ig;
+  const groupReg = /^(FD|FM|FE|fd|fm|fe)20\d{2}(-\d+)?$/g;
   arrGroups.forEach(function (group, i, arr) {
     if(groupReg.test(group)){
       console.log(`${group} - Success`);
