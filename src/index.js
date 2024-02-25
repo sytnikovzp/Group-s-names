@@ -15,7 +15,7 @@ const arrGroups = [
 ];
 
 function checkGroupsNames(arrGroups) {
-  const groupReg = /^([A-Z]{2}|[a-z]{2})20\d{2}(-\d+)?$/;
+  const groupReg = /^(FD|FM|FE)20\d{2}(-\d+)?$/ig;
   arrGroups.forEach(function (group, i, arr) {
     if(groupReg.test(group)){
       console.log(`${group} - Success`);
