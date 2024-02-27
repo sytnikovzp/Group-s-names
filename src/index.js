@@ -15,15 +15,7 @@ const arrGroups = [
   'FM2022-1',
 ];
 
-function checkGroupsNames(arrGroups) {
-  const groupReg = /^(F[DME]|f[dme])20\d{2}(-\d+)?$/;
-  arrGroups.forEach(function (group, i, arr) {
-    if(groupReg.test(group)){
-      console.log(`${group} - Success`);
-      return;
-    }
-    console.log(`${group} - Error`);
-  });
-}
+const groupReg = /^(F[DME]|f[dme])20\d{2}(-\d+)?$/;
 
-checkGroupsNames(arrGroups);
+const checkGroupsNames = arrGroups.forEach(group => 
+  console.log(`${group} is ${groupReg.test(group)}`))
