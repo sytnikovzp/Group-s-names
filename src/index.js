@@ -17,5 +17,6 @@ const arrGroups = [
 
 const groupReg = /^(F[DME]|f[dme])20\d{2}(-\d+)?$/;
 
-const checkGroupsNames = arrGroups.forEach(group => 
-  console.log(`${group} is ${groupReg.test(group)}`))
+arrGroups.forEach((group) => {
+  console.log(`${group} is ${groupReg.test(group)}`);
+});
